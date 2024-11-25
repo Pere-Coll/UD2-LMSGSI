@@ -1,0 +1,196 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #e0f7fa; 
+  color: #2e7d32; 
+  text-align: center; 
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+* {
+  box-sizing: border-box; /* Per a que els elements no es desplacin quan s'afegeixen marges o vores */
+  margin: 0;
+  padding: 0;
+}
+
+header, footer, main, nav, .search-bar, .destinacions, article {
+  animation: fadeIn 1s ease-in-out;
+}
+
+header {
+  background-color: #ffffff; 
+  color: #2e7d32; 
+  padding: 10px 10px;
+  text-align: center;
+  position: relative; /* Per a que el logo es pugui centrar verticalment */
+  border-bottom: 2px solid #66bb6a;
+  position: sticky; /* Per a que el header es quedi fixat a dalt de la pàgina */
+}
+
+.logo img {
+  width: 200px;
+  height: auto; /* Per a que l'altura es redimensioni automàticament */
+  margin: 0;
+}
+
+body header div.logo:hover {
+  transform: scale(1.1); /* Efecte d'escala al passar el ratolí per damunt */
+}
+
+nav ul {
+  list-style: none; /* Eliminar punts i estils per defecte de les llistes */
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+nav ul li {
+  display: inline-block; /* Per a que els elements de la llista es coloquin en línia */
+  margin: 2px 0;
+  padding: 3px;
+}
+
+nav ul li a {
+  color: #2e7d32; 
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s, transform 0.3s; 
+}
+
+a:hover {
+  color: #388e3c;
+  transform: scale(1.1); 
+}
+
+.search-bar {
+  margin: 20px auto;
+  width: 100%;
+  display: flex; /* Se que no es pot emprar pero quedava molt malament sense aquesta propietat */
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  overflow: hidden; 
+}
+
+.search-bar input {
+  padding: 10px;
+  border: 2px solid #66bb6a; 
+  border-right: none; 
+  border-radius: 5px 0 0 5px;
+  width: 60%;
+  transition: background-color 0.3s; 
+}
+
+.search-bar input:focus {
+  background-color: #dcedc8; 
+  outline: none; 
+}
+
+.search-bar button {
+  padding: 10px;
+  border: 2px solid #66bb6a; 
+  border-left: none; 
+  background-color: #66bb6a; 
+  color: #ffffff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.search-bar button:hover {
+  background-color: #388e3c;
+  transform: scale(1.1); 
+}
+
+.destinacions h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #2e7d32;
+}
+
+article {
+  display: block; /* Per defecte en movil es veuran un davall l'altre */
+  width: 80%;
+  padding: 20px;
+  height: 250px;
+  margin: 20px auto;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(99, 90, 90, 0.1);
+}
+
+article div {
+  display: block;
+  margin: 10px 0;
+}
+article:hover {
+  transform: translateY(-10px);
+}
+
+article img {
+  width: 100px;
+  height: auto;
+  border-radius: 20px;
+  margin: 5px;
+}
+div.text {
+  text-align: center;
+}
+
+article h3 {
+  font-size: 18px;
+  color: #2e7d32;
+}
+
+article p {
+  color: #388e3c;
+}
+
+footer {
+  background-color: #66bb6a; 
+  color: #ffffff;
+  text-align: center;
+  padding: 20px 10px;
+}
+
+.footer-links {
+  margin-bottom: 5px;
+}
+
+.footer-links a {
+  color: #d4e157;
+  text-decoration: none;
+  display: inline-block;
+  transition: color 0.3s;
+  padding: 3px;
+}
+
+.footer-links a:hover {
+  color: #ffffff;
+}
+div p {
+  margin: 3px;
+}
+
+/* Media queries per a tablet i escritori */
+@media (min-width: 1024px) {
+  article {
+    width: 40%; /* S'ajusta l'amplada per poder caber més de un horitzontalment*/
+    display: inline-block; /* Els articles es coloquen un duvora l'altre */
+    margin: 10px; 
+    vertical-align: text-bottom; 
+    height: 260px; /* S'ajusta l'altura per poder caber el text */
+  }
+  
+  article img {
+    width: 100px; 
+  }
+
+  main {
+    padding: 20px; 
+  }
+}
